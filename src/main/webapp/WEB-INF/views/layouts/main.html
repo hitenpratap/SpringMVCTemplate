@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="headPart">
+    <title th:text="#{application.title}"></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/resources/stylesheets/bootstrap-material-design.min.css}"/>
+    <link rel="stylesheet" th:href="@{/resources/stylesheets/ripples.min.css}"/>
+    <link rel="stylesheet" th:href="@{/resources/stylesheets/custom.css}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script th:src="@{/resources/js/material.min.js}"></script>
+    <script th:src="@{/resources/js/ripples.min.js}"></script>
+</head>
+<body>
+<div class="navbar navbar-inverse" th:fragment="header">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target=".navbar-inverse-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand logo-heading" th:href="@{/}">HakRex</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-inverse-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="javascript:void(0)"><i class="fa fa-suitcase"></i> Projects</a></li>
+                <!--<li class="dropdown">-->
+                <!--<a href="bootstrap-elements.html" class="dropdown-toggle"-->
+                <!--data-toggle="dropdown">Dropdown-->
+                <!--<b class="caret"></b></a>-->
+                <!--<ul class="dropdown-menu">-->
+                <!--<li><a href="javascript:void(0)">Action</a></li>-->
+                <!--<li><a href="javascript:void(0)">Another action</a></li>-->
+                <!--<li><a href="javascript:void(0)">Something else here</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li class="dropdown-header">Dropdown header</li>-->
+                <!--<li><a href="javascript:void(0)">Separated link</a></li>-->
+                <!--<li><a href="javascript:void(0)">One more separated link</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="javascript:void(0)"><i class="fa fa-sign-in"></i> Login</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div th:fragment="footer">
+    <script>
+        $.material.init()
+    </script>
+</div>
+</body>
+</html>
